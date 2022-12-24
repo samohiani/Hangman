@@ -1,4 +1,3 @@
-from replit import clear
 import random
 
 from hangman_words import word_list
@@ -9,9 +8,10 @@ end_of_game = False
 lives = 6
 
 from hangman_art import logo
+print("Welcome to Hangman!🤩")
 print(logo)
 #Testing code
-print(f'Pssst, the solution is {chosen_word}.')
+# print(f'Pssst, the solution is {chosen_word}.')
 
 #Create blanks
 display = []
@@ -31,11 +31,12 @@ while not end_of_game:
     if guess not in chosen_word:
       print(f"You guessed {guess}, that's not in the word.")
       lives -= 1
-      print(f"You lose a life.\n{lives} left!")
-      if lives == 0:
-          end_of_game = True
-          print("You LOSE!")
-          print(f"Your word was {chosen_word}")
+      if lives != 0:
+        print(f"You lose a life.\n{lives} left!")
+      elif lives == 0:
+            end_of_game = True
+            print("You LOSE!")
+            print(f"Your word was {chosen_word}.")
     #Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
 

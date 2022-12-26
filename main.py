@@ -8,7 +8,7 @@ end_of_game = False
 lives = 6
 
 from hangman_art import logo
-print("Welcome to Hangman!🤩")
+print("Welcome to Hangman!!🤩")
 print(logo)
 #Testing code
 # print(f'Pssst, the solution is {chosen_word}.')
